@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<link rel="stylesheet" type="text/css" href="style.css">	
+<link rel="stylesheet" type="text/css" href="style_barra.css">
+	
+<title>Plantaciones de Palma de Aceite en CoopeCalifornia R.L.</title>   
+
+
+<style> 
+	body  {
+	  background-image: url("palma.JPG");           
+	  background-size: 100% auto;
+	  background-repeat: no-repeat; 
+	  margin: 1%;
+	  
+	}
+</style>
+
+<meta charset="UTF-8">
+	   
+<title>Getting Started - Leaflet js Map interactive library</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<div id="container"></div>
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+	<!-- Hoja de estilos CSS de Leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>	
+	<!-- Biblioteca JS de Leaflet -->
+	<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>	
+	<!-- Complemento Leaflet-providers -->
+	<script src="js/leaflet-providers.js"></script>	
+	
+	<!-- En HTML: enlace a Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+	integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	crossorigin="anonymous" />
+	
+	<!-- Enlace a biblioteca JQuery -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous">
+	
+</script>
+</head>
+
+<body>
+
+<div class="topnav">
+  <a href="index.html">Principal</a>
+  <a class="active"  href="smscopecalifornia.html">SMS-CoopeCalifornia R.L.</a>
+  <a href="clima_index.html">Sección climática</a>
+  <a href="contactos.html">Contactos</a>
+</div>
+
+	
+
+<style>
+h1 {
+  text-shadow: 2px 2px 5px white;
+}
+</style>
+
+
+<h1 style="text-align:center;margin-left: 75px; margin-right: 100px;" >Sistema de Monitoreo Satelital de las Plantaciones de Palma de Aceite en CoopeCalifornia R.L. </h1>
+
+
+<div id="panel" style = "margin-left:2%; margin-right: 2%; background-color:#D3D3D3;">
+					<label>Selecione una Finca</label>
+					<select id="estilo" onchange="estiloSelect()">
+					  <option value="Todas">TODOS</option>
+					  <option value="El Tigre">El Tigre</option>
+					  <option value="La Palma">La Palma</option>
+					  <option value="Los Angeles" >Los Angeles</option>
+					</select>
+</div>
+	
+<!-- Elemento div para contener el mapa -->
+<div id="mapid" style = "margin-left:2%; margin-right: 2%; height:100vh; width: auto; z-index: 1; "></div>	
+
+
+<!-- Código principal en JS -->
+	<script src="js/scripts.js"></script>	
+
+<!--<div class="row" style="background:rgba(255,255,255,.85);margin-top: 80px;"> 
+ <center>
+	<img src="logoucr.png" alt="Logo UCR" width="470" height="100" align=”middle”><img src="logocia.png" alt="Logo del CIA" width="240" height="98" align=”middle”><img src="logocoope.png" alt="Logo de CoopeVictoria R.L." width="280" height="110" align=”middle”>
+  </center>
+
+ </div>-->
+
+
+</body>
+</html>

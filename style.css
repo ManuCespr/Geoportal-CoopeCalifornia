@@ -1,0 +1,91 @@
+#mapid {
+	height:100vh;
+	width: auto;
+	z-index: 1;
+}
+
+#navbar {
+  z-index: 2;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 100px;
+  float: left;
+  padding:1em 1em 1em 1em;
+  text-align:left;
+  border-style:solid;
+  border-color: grey;
+  border-width: 1px; 
+  background-color:rgba(255,255,255,.75);
+  
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+splitleft {
+  left: 0;
+  background-color: rgba(255,255,255,.85;
+}
+
+splitright {
+ left: 100%;
+  background-color: rgba(255,255,255,.85;
+}
+
+h1 {
+  font-size: 300%;
+  text-align: left;
+  margin: 20%;
+  
+}
+
+h2 {
+  font-size: 200%;
+  margin: 20%;
+}
+
+p {
+  font-size: 100%;
+  text-align:justify;
+}
+
+.legend {
+	color: #555;
+	padding: 3px 4px;
+	font: Verdana;
+	background: white;
+	background: rgba(255,255,255,0.8);
+	box-shadow: 0 0 15px rgba(0,0,0,0.2);
+	border-radius: 5px;
+}
+
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.75;
+}	
+

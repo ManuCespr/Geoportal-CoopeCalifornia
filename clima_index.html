@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Hoja de estilos CSS adicionales -->
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="style_barra.css">
+<html>
+<head>
+<style>
+h1 {
+  text-shadow: 2% 2% 5% white;
+}
+</style>
+</head>
+<body>
+ <title>Plantaciones de Palma de aceite CoopeCalifornia R.L.
+ </title>  
+
+<style>
+body  {
+/* background-image: url("canal.jpg");  */      
+ background-size: 100% auto;
+ background-repeat: no-repeat;
+ margin: 1%;
+ 
+}
+</style>
+
+<meta charset="UTF-8">
+
+</script>
+
+</head>
+
+<body>
+
+<div class="row" >
+<div class="row" style="background-color:white;">
+<div class="topnav">
+  <a  href="index.html">Principal</a>
+  <a href="smscopecalifornia.html">SMS-CoopeCalifornia R.L.</a>
+  <a class="active" href="clima_index.html">Sección climática</a>
+   <a href="contactos.html">Contactos</a>
+
+</div>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 90%;
+  padding: 0%;
+ /* height: 100px;*/  /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+
+
+
+<!-- /////////////////////////////////////////////// Columna 1-->
+     
+ 
+     
+<div class="column">
+  <div class="column" style="background-color:white;height: 10%; width: 50%">
+   <div id="container" style="height: 50%; width: 100%"></div>
+  <h2>Datos climáticos</h2>  
+
+    <h2>Datos de precipitación y evapotranspiración de referencia</h2>
+   
+  <!-- Current Date and Time -->
+Fecha y hora actual:
+<input type="text" id="currentDateTime">
+<br><br>
+<script>
+var today = new Date();
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+var dateTime = date+' '+time;
+  document.getElementById("currentDateTime").value = dateTime;
+
+
+</script>
+  <canvas id="stage2"></canvas>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.2/dist/chart.js"></script>
+  <script> 
+
+    const url2 = 'https://api.open-meteo.com/v1/forecast?latitude=9.533492&longitude=-84.342523&daily=precipitation_sum,et0_fao_evapotranspiration&timezone=America%2FDenver';
+
+    fetch(url2)
+    .then(data => data.json())
+    .then(json => drawChart(json))
+
+
+    function drawChart(json) {
+      const mydata2 = {
+        labels: json.daily.time,
+        datasets: [{
+          label: 'Precipitación (mm)',
+          data: json.daily.precipitation_sum,
+          borderColor: 'rgb(192, 75, 75)',
+        },{
+          label: 'ETo FAO (mm)',
+          data: json.daily.et0_fao_evapotranspiration,
+          borderColor: 'rgb(75, 75, 192)',
+        }]
+      }
+
+      new Chart(document.getElementById('stage2'), {
+        type: 'line',
+        data: mydata2,
+fill: true,
+backgroundColor: "rgba(255,99,132,0.2)",
+      });
+    }
+  </script>
+<p>Fuente: OpenMeteo</p>
+</div>
+
+
+    <!-- /////////////////////////////////////////////// Columna 2-->
+   
+       
+ 
+  <div class="column" style="background-color:white;height: 10%; width: 50%">
+      <div id="container" style="height: 70%; width: 10%"></div>
+<h2>Datos estación La Ligia</h2>
+
+<!--  /* style="background-color: rgba(1000, 1000, 1000, 0.6)" */ -->
+<embed type="text/html" src="https://www.imn.ac.cr/especial/tablas/laligia.html"  width="900" height="500">
+
+  </script>
+
+    <p>Fuente: Instituto Meteorológico Nacional</p>
+<string>Datos sin control de calidad</string>
+</div>
+
+ 
+   
+  <!-- /////////////////////////////////////////////// Columna 3-->
+ 
+
+<div class="column" style="background-color: white;height: 10%; width: 50%">
+ <div id="container" style="height: 70%; width: 10%"></div>
+    <h2>Datos climáticos de Windy</h2>
+    <p>Puede explorar diferente tipos de datos</p>
+    <iframe width="80%" height="700" src="https://embed.windy.com/embed2.html?lat=9.533492&lon=-84.342523&detailLat=9.53349&detailLon=-84.342523&width=650&height=450&zoom=11&level=surface&overlay=wind&product=ecmwf&menu=&message=true&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=true&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1" frameborder="1"></iframe>
+  </script>
+   <p>Fuente: Windy.com </p>
+  </div>
+ <br><p> </p></br>
+ <!-- /////////////////////////////////////////////// Columna 4-->
+
+
+
+  
+<div class="column" style="background-color: white;height: 10%; width: 50%">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <div id="container" style="height: 70%; width: 10%"></div>
+   
+
+ <h2>Datos climáticos de Open Meteo</h2>
+
+<h3>Datos de temperatura horarios y proyectados</h3>
+
+  
+
+<canvas id="stage1"></canvas>
+
+
+ <script src="https://canvasjs.com/assets/script/canvasjs"></script>
+  
+  <script>
+
+    const url1 = 'https://api.open-meteo.com/v1/ecmwf?latitude=9.533492&longitude=-84.342523&hourly=temperature_2m';
+
+    fetch(url1)
+    .then(data => data.json())
+    .then(json => drawChart(json))
+
+
+    function drawChart(json) {
+      const mydata3 = {
+        labels: json.hourly.time,
+        datasets: [{
+          label: 'Temperatura (C°)',
+          data: json.hourly.temperature_2m,
+          borderColor: 'rgb(192, 75, 75)',
+        }]
+      }
+      new Chart(document.getElementById('stage1'), {
+        type: 'line',
+        data: mydata3,
+fill: false,
+backgroundColor: "rgba(255,99,132,0.1)",
+      });
+    }
+    
+  </script>
+
+   <string>Fuente: OpenMeteo </string>  
+ 
+   </script>
+  </div>
+
+<br><br>
+
+  </div>
+
+
+<br><p> </p></br>
+ 
+
+
+<br><div class="row" style="background-color: white;height: 10%; width: 90%"></br>
+
+<hr/>
+
+<h2>Notas importantes:</h2>
+
+<p>Todos los datos climáticos están en relación a la ubicación de CoopeCalifornia R.L.</p>
+<p>Los datos de la estación La Ligia provienen del Instituto Meteorológico Nacional de Costa Rica.</p>
+<p>Esta estación del IMN se ubica aproximadamente a 2,5 km al este de la cooperativa.</p>
+<p>Si algún gráfico no carga por favor <strong> recargue la página.</strong></p>
+
+</body>
+</html>
